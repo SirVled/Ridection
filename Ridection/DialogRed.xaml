@@ -1,0 +1,46 @@
+﻿<Window x:Class="Ridection.DialogRed"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DialogRed" Height="375.667" Width="507.173" Loaded="StartRedect" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid x:Name="Gz">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="260" VerticalAlignment="Top" Width="293" Margin="10,10,0,0">
+            <Grid x:Name="sObj" HorizontalAlignment="Left" Height="234" VerticalAlignment="Top" Width="270" Margin="9,9,0,-1">
+                <Label x:Name="Del_Lab" Content="" HorizontalAlignment="Left" Margin="46,44,0,0" VerticalAlignment="Top" Height="140" Width="140" BorderBrush="Black" BorderThickness="1"/>
+                <TextBox x:Name="wWigh" Text="75" HorizontalAlignment="Left" FontSize="16" Margin="100,0,0,0" VerticalAlignment="Top" PreviewTextInput="Valid_Text" TextChanged="SetSizeObj"/>
+                <TextBox x:Name="hHeig" Text="75" HorizontalAlignment="Left" FontSize="16" Margin="-6,107,0,0" VerticalAlignment="Top" PreviewTextInput="Valid_Text" TextChanged="SetSizeObj"/>
+                <Grid HorizontalAlignment="Left" Height="63" Margin="22,82,0,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.6,0.531">
+                    <Button Content="^" FontSize="16" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="15" Click="Click_to_P_Hight"/>
+                    <Button Content="v" FontSize="16" HorizontalAlignment="Left" Margin="0,35,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.25,0.941" Click="Click_to_M_Hight"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="62" Margin="104,4,0,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.6,0.531">
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Grid.RenderTransform>
+                    <Button Content="^" FontSize="16" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="15" Click="Click_to_P_Wight" />
+                    <Button Content="v" FontSize="16" HorizontalAlignment="Left" Margin="0,35,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.25,0.941" Click="Click_to_M_Wight"/>
+                </Grid>
+                <Label Content="Opacity :" HorizontalAlignment="Left" Margin="22,198,0,0" VerticalAlignment="Top"/>
+                <Slider x:Name="Slid" HorizontalAlignment="Left" Margin="83,203,0,0" VerticalAlignment="Top" Width="103" ValueChanged="ValueRef" Maximum="1" TickFrequency="0.1" LargeChange="0.1"/>
+                <TextBlock x:Name="valOP" Text="" HorizontalAlignment="Left" Margin="191,203,0,0" VerticalAlignment="Top" />
+            </Grid>
+        </Border>
+        <ScrollViewer x:Name="ScV" HorizontalAlignment="Left" Height="161" Margin="308,10,0,0" VerticalAlignment="Top" Width="183">
+            <StackPanel x:Name="StackP" Orientation="Vertical">
+            </StackPanel>
+        </ScrollViewer>
+        <Button x:Name="SaveСhange" Content="Apply" HorizontalAlignment="Left" Margin="393,298,0,0" VerticalAlignment="Top" Width="75" Height="25" Click="Save"/>
+        <Button x:Name="LoadImg" Content="Загрузить img" HorizontalAlignment="Left" Margin="19,298,0,0" VerticalAlignment="Top" Height="27" Width="107" />
+        <Slider x:Name="Srgb1"  Value="0" HorizontalAlignment="Left" Margin="308,186,0,0" VerticalAlignment="Top" Width="125" Maximum="255" ValueChanged="SlRgb"/>
+        <TextBox x:Name="Trgb1" Text="0" HorizontalAlignment="Left" Height="18" Margin="438,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Background="Transparent" TextAlignment="Center" PreviewTextInput="Valid_RGB" TextChanged="CheckRgbFormat"/>
+        <Slider x:Name="Srgb2" Value="0" HorizontalAlignment="Left" Margin="308,209,0,0" VerticalAlignment="Top" Width="125" Maximum="255" ValueChanged="SlRgb" />
+        <TextBox x:Name="Trgb2" Text="0" HorizontalAlignment="Left" Height="18" Margin="438,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Background="Transparent" TextAlignment="Center" PreviewTextInput="Valid_RGB" TextChanged="CheckRgbFormat"/>
+        <Slider x:Name="Srgb3" Value="0" HorizontalAlignment="Left" Margin="308,232,0,0" VerticalAlignment="Top" Width="125" Maximum="255" ValueChanged="SlRgb"/>
+        <TextBox x:Name="Trgb3" Text="0" HorizontalAlignment="Left" Height="18" Margin="438,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Background="Transparent" TextAlignment="Center" PreviewTextInput="Valid_RGB" TextChanged="CheckRgbFormat"/>
+
+    </Grid>
+</Window>
